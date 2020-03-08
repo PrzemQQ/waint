@@ -1,0 +1,163 @@
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sklep u Sipy</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <article id='first'>
+        <section>
+            <img src="desktop.svg" alt=" ">
+        </section>
+        <section id="logo">
+            <img src="logo.png " alt=" ">
+            <nav>
+                <ul>
+                    <a href="#first">
+                        <li>Strona główna</li>
+                    </a>
+
+                    <a href="#second">
+                        <li>Stwórz zestaw</li>
+                    </a>
+
+                    <a href="#third">
+                        <li>Kontakt</li>
+                    </a>
+
+
+                </ul>
+                <p>Sklep internetowy by SIPA</p>
+                <p>Życzymy przyjemnych zakupów</p>
+
+            </nav>
+        </section>
+    </article>
+    <article id="second">
+        <section>
+            <h1>Stwórz swój zestaw!</h1> <br>
+
+            <form action="">
+                <fieldset>
+                    <legend> Personalizuj sprzęt</legend>
+                    <label for="amd">Producent:</label><br> <input type="radio" name="amd" id="cpu_amd"> <label for="amd">AMD</label>
+                    <input type="radio" name="amd" id="cpu_intel"> <label for="amd"> Intel</label> <br> <br>
+                    <div id="intel">
+                        <label for="cpuIntel" id="label_Intel">Procesor Intel:</label>
+                        <select name="cpuIntel" id="next_cpu_intel">
+                            <option value="" hidden>Procesory</option>
+                             <option value="0"  >Intel Pentium</option>
+                             <option value="1"  >Intel Core i3</option>
+                             <option value="2"  >Intel Core i5</option>
+                             <option value="3"  >Intel Core i7</option>
+                             <option value="4"  >Intel Core i9</option>
+                            </select><br>
+                    </div>
+                    <div id="amd">
+                        <label for="cpuAmd">Procesor AMD:</label>
+                        <select name="cpuAmd" id="next_cpu_amd">
+                        <option value="" hidden>Procesory</option>
+                        <option value="0">AMD Ryzen 3</option>
+                        <option value="1">AMD Ryzen 5</option>
+                        <option value="2">AMD Ryzen 9</option>
+                    </select> <br>
+                    </div>
+
+                    <label for="mother">Płyta główna:</label>
+                    <select name="mother" id="mother">
+                        <option value="" hidden>Płyta Główna</option>
+                        <option value="0">Firmy A; 4 sloty RAM; obsługa dysków m.2 </option>
+                        <option value="1">Firmy B; 6 slotów RAM; obsługa portu USB C</option>
+                        <option value="2">Firmy C; 8 slotów RAM; dwa gniazda CPU</option>
+                    </select>
+                    <br>
+                    <label for="ram">Pamięć RAM:</label>
+                    <select name="ram" id="ram">
+                        <option value="" hidden>RAM</option>
+                        <option value="0">4 GB </option>
+                        <option value="1">8 GB</option>
+                        <option value="2">16GB</option>
+                    </select>
+                    <br>
+                    <label for="hdd">Dysk twardy:</label>
+                    <select name="hdd" id="hdd">
+                        <option value="" hidden>HDD</option>
+                        <option value="0">256 GB</option>
+                        <option value="1">1 TB</option>
+                        <option value="2">2 TB</option>
+                    </select>
+                    <br>
+                    <label for="ssd">Dysk SSD:</label> <br>
+                    <input type="radio" name="ssd" id="ssd_yes" value="0"> <label for="ssd">TAK</label> <input type="radio" name="ssd" id="ssd_no" value="0"> <label for="ssd">NIE</label><br>
+                    <label for="dod">Dodatkowe wyposażenie:</label> <br>
+
+                    <input type="checkbox" name="monitor" id="monitor">
+                    <label for="dod">Monitor</label>
+
+                    <input type="checkbox" name="myszka" id="myszka">
+                    <label for="dod">Myszka</label>
+
+                    <input type="checkbox" name="klawiatura" id="klawiatura">
+                    <label for="dod">Klawiatura</label>
+
+                    <input type="checkbox" name="system" id="system">
+                    <label for="dod">System Windows 10</label><br> <br>
+                    <label for="led">Kolor ledów:</label>
+                    <input type="color" name="led" id="colors"> <br> <br>
+                    <label for="dostawa">Data dostawy:</label>
+                    <input type="date" name="dostawa" id="delivery"> <br> <br>
+                    <label for="kom">Komentarz:</label>
+                    <textarea name="kom" id="comments" cols="30" rows="1"></textarea> <br>
+                    <button type="submit" onclick="konfiguracja()"><a href="#zestaw">Wyślij </a></button> <br> <br>
+                    <button type="reset" value="reset" id="reset"> <a href="index.html"> reset</a> </button>
+                </fieldset>
+
+            </form>
+        </section>
+        <section id='zestaw'>
+            <br><br><br><br>
+            <fieldset id="f2">
+
+                <h2>Twoja konfiguracja:</h2>
+                <div class="xd">
+                    <p id="p_cpu">Procesor:</p>
+                    <p id="p_mother"> Płyta główna:</p>
+                    <p id="p_ram">RAM:</p>
+                    <p id="p_hdd">HDD:</p>
+                    <p id="p_ssd">SSD:</p>
+                    <p id="p_external">Dodatkowe wyposażenie:</p>
+                    <p id="p_colors">Kolor ledów:</p>
+                    <p id="p_data">Data dostawy:</p>
+                    <p id="p_comments">Komentarz:</p>
+                </div>
+            </fieldset>
+        </section>
+    </article>
+    <article id="third">
+        <h1>Skontaktuj się z nami!</h1>
+        <section>
+            <form action="">
+                <fieldset>
+                    <legend>Kontakt</legend>
+                    <label for="imie">Imię:</label> <input type="text" name="imie" id="" required> <br>
+                    <label for="nazwisko">Nazwisko:</label> <input type="text" name="nazwisko" id="" required> <br>
+                    <label for="mail">Mail:</label> <input type="email" name="mail" id="" required> <br>
+                    <label for="pytanie">Zapytanie:</label> <textarea name="" id="" cols="30" rows="4"></textarea> <br>
+                    <button type="submit">Wyślij</button>
+                </fieldset>
+
+            </form>
+        </section>
+        <footer>Created By Przemysław Sipa 2020 All rights reserved &copy; </footer>
+    </article>
+
+    <script src="script.js "></script>
+</body>
+
+</html>
+
+</html>
